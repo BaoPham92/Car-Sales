@@ -37,6 +37,12 @@ export default (state = carReducer, action) => {
                     ...state.car,
                     features: state.car.features.filter(item => item.id !== action.payload.id)
                 }
+            };
+        case 'TOTAL_FEATURE':
+            console.log('REDUCERRRRRRR', action, state)
+            return {
+                ...state,
+                additionalPrice: action.payload
             }
         default:
             return state;

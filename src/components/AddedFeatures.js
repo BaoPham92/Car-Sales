@@ -13,9 +13,9 @@ const AddedFeatures = props => {
       {props.car.car && props.car.car.features.length > 0 ? (
         <ol type="1">
           {props.car.car && props.car.car.features.length > 0
-            && props.car.car.features.map(item => (
+            && props.car.car.features.map((item, key) => (
               <AddedFeature
-                key={item.id}
+                key={key}
                 feature={item}
                 remove={props.remove}
               />
