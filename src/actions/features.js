@@ -17,7 +17,9 @@ export const remove = (feature) => ({
 const TOTAL_FEATURE = 'TOTAL_FEATURE';
 
 export const total = (feature) => {
-    console.log('ACTION FOLDER FOR TOTAL', feature)
+    
+    // ! LOG DATA!
+    // console.log(feature)
 
     // * ARRAY OF FEATURES
     const features = feature.car.car.features && feature.car.car.features.map(item => item.price)

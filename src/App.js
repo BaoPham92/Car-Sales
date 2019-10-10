@@ -10,7 +10,8 @@ import { add, remove, total } from './actions/features';
 
 const App = (props) => {
 
-  console.log(props)
+  // ! LOG DATA
+  // console.log(props)
 
   // * CAR STATE
   const { car } = props;

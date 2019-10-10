@@ -4,7 +4,9 @@ import React, { useEffect } from 'react';
 import { total } from '../actions/features';
 
 const Total = props => {
-  console.log('TOTALLLLLLLLLLLLL', props)
+  
+  // ! LOG DATA!
+  // console.log(props)
 
   useEffect(() => {
 

@@ -20,6 +20,10 @@ const carReducer = {
 export default (state = carReducer, action) => {
     switch (action.type) {
         case 'ADD_FEATURE':
+
+            // ! LOG DATA
+            // console.log('ADD_FEATURE', action, state)
+
             return {
                 ...state,
                 car: {
@@ -31,6 +35,10 @@ export default (state = carReducer, action) => {
                 }
             };
         case 'REMOVE_FEATURE':
+
+            // ! LOG DATA
+            // console.log('REMOVE_FEATURE', action, state)
+
             return {
                 ...state,
                 car: {
@@ -39,7 +47,10 @@ export default (state = carReducer, action) => {
                 }
             };
         case 'TOTAL_FEATURE':
-            console.log('REDUCERRRRRRR', action, state)
+
+            // ! LOG DATA
+            // console.log('TOTAL_FEATURE', action, state)
+
             return {
                 ...state,
                 additionalPrice: action.payload
