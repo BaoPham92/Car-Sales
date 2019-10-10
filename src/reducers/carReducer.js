@@ -31,10 +31,13 @@ export default (state = carReducer, action) => {
                 }
             };
         case 'REMOVE_FEATURE':
-            // return {
-            //     ...state.features,
-            //     ...action.payload
-            // };
+            return {
+                ...state,
+                car: {
+                    ...state.car,
+                    features: state.car.features.filter(item => item.id !== action.payload.id)
+                }
+            }
         default:
             return state;
     }

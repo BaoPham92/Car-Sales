@@ -6,27 +6,31 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
 // * ACTIONS
-import { add, remove, startAddFeature, startRemoveFeature } from './actions/features';
+import { add, remove } from './actions/features';
 
 const App = (props) => {
 
   console.log(props)
 
-  // * STATE
-  const { car } = props
+  // * CAR STATE
+  const { car } = props;
 
   // ! LOG DATA
-  // console.log(car)
+  // console.log(car);
 
   const removeFeature = item => {
-    // dispatch an action here to remove an item
-    console.log(item)
+
+    // ! LOG DATA
+    // console.log(item)
+
     return props.remove(item)
   };
 
   const buyItem = item => {
-    // dipsatch an action here to add an item
-    console.log(item)
+
+    // ! LOG DATA
+    // console.log(item)
+    
     return props.add(item);
   };
 
@@ -38,13 +42,13 @@ const App = (props) => {
         />
         <AddedFeatures
           car={car}
+          remove={removeFeature}
         />
       </div>
       <div className="box">
         <AdditionalFeatures
           store={car.additionalFeatures}
           add={buyItem}
-          remove={removeFeature}
         />
         <Total
           car={car}
